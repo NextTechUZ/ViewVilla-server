@@ -1,8 +1,10 @@
 const express = require("express");
 const bot = require("./bot");
+const cors = require("cors");
 const app = express();
 
 app.use(express.json());
+app.use(cors());
 
 app.post("/order", (req, res) => {
    bot.telegram.sendMessage(
