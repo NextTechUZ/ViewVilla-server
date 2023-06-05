@@ -7,10 +7,9 @@ const bot =new Telegraf(process.env.BOT_TOKEN)
 
 
 bot.use(ctx => {
-    console.log(ctx.update.channel_post);
+    console.log(ctx);
     ctx.reply("ctx")
 })
 
-
-
+ 
 module.exports = bot
